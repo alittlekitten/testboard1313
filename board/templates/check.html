@@ -1,0 +1,16 @@
+
+{{board.title}}
+
+{% block content %}
+
+<h1>내가 작성한 게시글</h1>
+
+    {% for board in boards.all %}
+    <div class="container">
+        <h1>{{ board.title }}</h1>
+        <p>{{ board.pub_date }}</p>
+        <p>{{ board.body }}</p>
+    </div>
+    
+    {% endfor %}
+{% endblock %}
